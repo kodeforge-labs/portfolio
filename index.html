@@ -3,173 +3,150 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your Name – Software &amp; IT Portfolio</title>
-<meta name="description" content="Portfolio of Your Name: projects, live demos and contact.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+<title>Your Name – Power Platform Developer</title>
+<meta name="description" content="Power Platform developer: Power Apps, Power Automate, Power BI, Dataverse and SharePoint solutions.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#f3f6f8; --surface:#ffffff; --ink:#14213d; --muted:#51607a;
-  --line:#d5dde6; --accent:#0a7c86; --accent-ink:#ffffff; --signal:#c98400;
-  --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
-  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
-  --code:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--bg:#0e1626;--surface:#162038;--ink:#e8eef7;--muted:#9fb0c9;--line:#2a3857;--accent:#3cc4cf;--accent-ink:#0e1626;--signal:#f2b53a}
-}
-:root[data-theme="dark"]{--bg:#0e1626;--surface:#162038;--ink:#e8eef7;--muted:#9fb0c9;--line:#2a3857;--accent:#3cc4cf;--accent-ink:#0e1626;--signal:#f2b53a}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+:root{--bg:#f6f4f9;--surface:#fff;--ink:#1d1630;--muted:#5b5470;--line:#ddd6e8;--accent:#6b2c91;--accent-ink:#fff;--signal:#e0b400;
+--head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#140f20;--surface:#1e1730;--ink:#efeaf8;--muted:#b0a6c8;--line:#352b50;--accent:#c08bf0;--accent-ink:#140f20;--signal:#f2c811}}
+:root[data-theme="dark"]{--bg:#140f20;--surface:#1e1730;--ink:#efeaf8;--muted:#b0a6c8;--line:#352b50;--accent:#c08bf0;--accent-ink:#140f20;--signal:#f2c811}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 var(--body)}
-a{color:var(--accent)}
-:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
+a{color:var(--accent)}:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
 .wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
-header.nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;gap:1rem;flex-wrap:wrap}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;gap:1rem;flex-wrap:wrap}
 .logo{font:800 1.2rem var(--head);color:var(--ink);text-decoration:none}
 nav{display:flex;gap:1.3rem;align-items:center;flex-wrap:wrap}
-nav a{color:var(--muted);text-decoration:none;font-weight:500}
-nav a:hover{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;font-weight:500}nav a:hover{color:var(--accent)}
 button{font:inherit;cursor:pointer}
 .theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:.25rem .6rem}
 .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:center;padding:3.5rem 0 4rem}
-h1{font:800 clamp(2.4rem,6vw,4.2rem)/1.05 var(--head);letter-spacing:-.02em;margin:0 0 1rem}
+h1{font:800 clamp(2.3rem,5.5vw,3.9rem)/1.06 var(--head);letter-spacing:-.02em;margin:0 0 1rem}
 .lead{color:var(--muted);max-width:34rem;margin:0 0 1.6rem}
 .btns{display:flex;gap:.8rem;flex-wrap:wrap}
 .btn{display:inline-block;padding:.7rem 1.2rem;border-radius:10px;font-weight:500;text-decoration:none;border:1px solid var(--accent)}
-.btn.primary{background:var(--accent);color:var(--accent-ink)}
-.btn.ghost{color:var(--accent)}
-.btn:hover{filter:brightness(1.1)}
-.demo{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.demo-bar{display:flex;justify-content:space-between;padding:.6rem .9rem;border-bottom:1px solid var(--line);font:500 .85rem var(--body);color:var(--muted)}
-.demo textarea,.demo pre{width:100%;margin:0;border:0;background:transparent;color:var(--ink);font:.85rem/1.5 var(--code);padding:.9rem;min-height:7.5rem;resize:vertical;overflow:auto;white-space:pre-wrap}
-.demo textarea{border-bottom:1px solid var(--line)}
-.demo pre.err{color:#c0392b}
-.demo-actions{padding:.6rem .9rem;border-top:1px solid var(--line)}
-.demo-actions button{background:var(--accent);color:var(--accent-ink);border:0;border-radius:8px;padding:.4rem .9rem;font-weight:500}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}.btn.ghost{color:var(--accent)}.btn:hover{filter:brightness(1.1)}
+.stack{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.tabs{display:flex;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.tabs button{flex:1 1 auto;background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:.7rem .6rem;font-weight:500}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--signal)}
+.panel{padding:1.2rem}.panel h3{font:700 1.2rem var(--head);margin:0 0 .5rem}.panel p{margin:0 0 .8rem;color:var(--muted)}
+.panel ul{margin:0;padding-left:1.1rem}
 section{padding:3rem 0;border-top:1px solid var(--line)}
-h2{font:700 1.9rem/1.2 var(--head);margin:0 0 .4rem;letter-spacing:-.01em}
-.sub{color:var(--muted);margin:0 0 2rem;max-width:36rem}
+h2{font:700 1.9rem/1.2 var(--head);margin:0 0 .4rem}
+.sub{color:var(--muted);margin:0 0 2rem;max-width:38rem}
 .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.3rem}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.3rem;display:flex;flex-direction:column;gap:.7rem}
 .card:first-child{border-left:5px solid var(--signal)}
-.card h3{font:700 1.25rem var(--head);margin:0}
-.card p{margin:0;color:var(--muted)}
+.card h3{font:700 1.2rem var(--head);margin:0}.card p{margin:0;color:var(--muted)}
 .tags{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0;margin:0}
-.tags li{font:500 .8rem var(--code);border:1px solid var(--line);border-radius:6px;padding:.1rem .5rem;color:var(--muted)}
+.tags li{font:500 .8rem var(--body);border:1px solid var(--line);border-radius:6px;padding:.1rem .5rem;color:var(--muted)}
 .links{display:flex;gap:1.1rem;margin-top:auto;padding-top:.4rem;font-weight:500}
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
-.skills h3{font:700 1.05rem var(--head);margin:0 0 .5rem}
-.skills ul{margin:0;padding-left:1.1rem;color:var(--muted)}
+.skills h3{font:700 1.05rem var(--head);margin:0 0 .5rem}.skills ul{margin:0;padding-left:1.1rem;color:var(--muted)}
 .about{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
-.contact{text-align:left}
-.contact .big{font:700 clamp(1.4rem,4vw,2.2rem) var(--head);word-break:break-word}
+.big{font:700 clamp(1.4rem,4vw,2.2rem) var(--head);word-break:break-word}
 footer{padding:2rem 0;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
 @media (max-width:760px){.hero,.about{grid-template-columns:1fr}.hero{padding-top:1.5rem}}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header class="nav">
-    <a class="logo" href="#top">Your Name</a>
-    <nav aria-label="Main">
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <button class="theme" id="theme" aria-label="Toggle dark mode">Theme</button>
-    </nav>
-  </header>
-
-  <main id="top">
-    <div class="hero">
-      <div>
-        <h1>I build software that works and explain how.</h1>
-        <p class="lead">I'm a [your role, e.g. full-stack developer / network engineer / data analyst]. Below are projects you can open and try, with the code behind each one.</p>
-        <div class="btns">
-          <a class="btn primary" href="#projects">Try my demos</a>
-          <a class="btn ghost" href="#contact">Get in touch</a>
-        </div>
-      </div>
-
-      <div class="demo" aria-label="Live demo: JSON formatter">
-        <div class="demo-bar"><span>Live demo: JSON formatter</span><span id="status">ready</span></div>
-        <label for="in" class="sr" style="position:absolute;left:-9999px">JSON input</label>
-        <textarea id="in" spellcheck="false">{"name":"Your Name","role":"Developer","skills":["HTML","Python","SQL"]}</textarea>
-        <pre id="out" aria-live="polite"></pre>
-        <div class="demo-actions"><button id="fmt">Format JSON</button></div>
-      </div>
+<header class="nav">
+  <a class="logo" href="#top">Your Name</a>
+  <nav aria-label="Main"><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a>
+  <button class="theme" id="theme" aria-label="Toggle dark mode">Theme</button></nav>
+</header>
+<main id="top">
+  <div class="hero">
+    <div>
+      <h1>I turn business processes into Power Platform solutions.</h1>
+      <p class="lead">Power Platform developer building apps, automations and dashboards on Power Apps, Power Automate, Power BI, Dataverse and SharePoint. Browse my projects with screenshots, demo videos and architecture notes.</p>
+      <div class="btns"><a class="btn primary" href="#projects">See my solutions</a><a class="btn ghost" href="#contact">Hire me</a></div>
     </div>
+    <div class="stack" aria-label="What I build with each tool">
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
+    </div>
+  </div>
 
-    <section id="projects">
-      <h2>Projects and live demos</h2>
-      <p class="sub">Each project has a working demo and its source code. Replace the examples below with your own.</p>
-      <div class="projects">
-        <article class="card">
-          <h3>Task Manager App</h3>
-          <p>A full-stack to-do app with user login and a REST API. Shows authentication, CRUD operations and database design.</p>
-          <ul class="tags"><li>React</li><li>Node.js</li><li>PostgreSQL</li></ul>
-          <div class="links"><a href="#" target="_blank" rel="noopener">Live demo</a><a href="#" target="_blank" rel="noopener">Source code</a></div>
-        </article>
-        <article class="card">
-          <h3>Sales Dashboard</h3>
-          <p>An interactive data dashboard that turns a CSV file into charts and filters. Built for non-technical users.</p>
-          <ul class="tags"><li>Python</li><li>Streamlit</li><li>Pandas</li></ul>
-          <div class="links"><a href="#" target="_blank" rel="noopener">Live demo</a><a href="#" target="_blank" rel="noopener">Source code</a></div>
-        </article>
-        <article class="card">
-          <h3>Fitness Tracker (mobile)</h3>
-          <p>A mobile app that logs workouts and shows weekly progress. Watch the walkthrough video or try it in the browser.</p>
-          <ul class="tags"><li>React Native</li><li>Firebase</li></ul>
-          <div class="links"><a href="#" target="_blank" rel="noopener">Walkthrough</a><a href="#" target="_blank" rel="noopener">Source code</a></div>
-        </article>
-      </div>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="sub">Each project shows the business problem, the solution and the tools used. Replace these examples with your own work and remove any confidential data from screenshots.</p>
+    <div class="projects">
+      <article class="card"><h3>Leave Request App</h3>
+        <p>Canvas app where staff request leave and managers approve in Teams. Cut approval time from days to hours.</p>
+        <ul class="tags"><li>Power Apps</li><li>Dataverse</li><li>Power Automate</li></ul>
+        <div class="links"><a href="#" target="_blank" rel="noopener">Demo video</a><a href="#" target="_blank" rel="noopener">Screenshots</a></div></article>
+      <article class="card"><h3>Sales Performance Dashboard</h3>
+        <p>Power BI report with DAX measures, row-level security and scheduled refresh from SQL and Excel sources.</p>
+        <ul class="tags"><li>Power BI</li><li>DAX</li><li>Power Query</li></ul>
+        <div class="links"><a href="#" target="_blank" rel="noopener">Live report</a><a href="#" target="_blank" rel="noopener">Screenshots</a></div></article>
+      <article class="card"><h3>Invoice Approval Workflow</h3>
+        <p>Automated flow that reads invoices from a SharePoint library, routes them for approval and logs results.</p>
+        <ul class="tags"><li>Power Automate</li><li>SharePoint</li><li>AI Builder</li></ul>
+        <div class="links"><a href="#" target="_blank" rel="noopener">Flow diagram</a><a href="#" target="_blank" rel="noopener">Demo video</a></div></article>
+      <article class="card"><h3>Asset Tracker (model-driven)</h3>
+        <p>Model-driven app on Dataverse with security roles, business rules and views for IT equipment management.</p>
+        <ul class="tags"><li>Dataverse</li><li>Model-driven apps</li><li>Security roles</li></ul>
+        <div class="links"><a href="#" target="_blank" rel="noopener">Data model</a><a href="#" target="_blank" rel="noopener">Screenshots</a></div></article>
+    </div>
+  </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <p class="sub">The tools I use most often.</p>
-      <div class="skills">
-        <div><h3>Languages</h3><ul><li>JavaScript / TypeScript</li><li>Python</li><li>SQL</li></ul></div>
-        <div><h3>Frameworks</h3><ul><li>React</li><li>Node.js / Express</li><li>Flask or Django</li></ul></div>
-        <div><h3>Infrastructure</h3><ul><li>Linux and networking</li><li>Git and GitHub Actions</li><li>Docker</li></ul></div>
-        <div><h3>Cloud and data</h3><ul><li>Firebase / Supabase</li><li>AWS or Azure basics</li><li>MySQL, PostgreSQL</li></ul></div>
-      </div>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <p class="sub">What I work with day to day.</p>
+    <div class="skills">
+      <div><h3>Power Apps</h3><ul><li>Canvas and model-driven apps</li><li>Power Fx</li><li>Component libraries, PCF</li></ul></div>
+      <div><h3>Power Automate</h3><ul><li>Cloud and desktop flows</li><li>Approvals and Teams</li><li>Custom connectors</li></ul></div>
+      <div><h3>Power BI</h3><ul><li>Data modelling, DAX</li><li>Power Query (M)</li><li>Row-level security</li></ul></div>
+      <div><h3>Data and SharePoint</h3><ul><li>Dataverse tables and security</li><li>SharePoint lists and libraries</li><li>SQL, REST APIs</li></ul></div>
+      <div><h3>Governance and ALM</h3><ul><li>Solutions and environments</li><li>Azure DevOps / GitHub</li><li>DLP policies, Entra ID</li></ul></div>
+    </div>
+  </section>
 
-    <section id="about">
-      <h2>About me</h2>
-      <div class="about">
-        <p>Write two or three sentences here: what you study or do, what kind of problems you enjoy, and what you are looking for (job, internship, freelance work).</p>
-        <p><strong>Education:</strong> Your degree, university, year.<br><strong>Certifications:</strong> e.g. CCNA, AWS Cloud Practitioner.<br><strong>Location:</strong> Your city, open to remote work.</p>
-      </div>
-    </section>
+  <section id="about">
+    <h2>About me</h2>
+    <div class="about">
+      <p>Write two or three sentences: how long you have worked with Power Platform, which industries or teams you built for, and what kind of project you want next (full-time role, contract, freelance).</p>
+      <p><strong>Certifications:</strong> PL-900, PL-200, PL-300, PL-400 (list yours).<br><strong>Education:</strong> Your degree, university, year.<br><strong>Location:</strong> Your city, open to remote work.</p>
+    </div>
+  </section>
 
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p class="sub">Open to jobs, internships and freelance projects. I reply within two days.</p>
-      <p class="big"><a href="mailto:you@example.com">you@example.com</a></p>
-      <p><a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a> · <a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a> · <a href="#" target="_blank" rel="noopener">Download CV</a></p>
-    </section>
-  </main>
-  <footer>© <span id="yr"></span> Your Name</footer>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="sub">Open to full-time roles, contracts and freelance projects.</p>
+    <p class="big"><a href="mailto:you@example.com">you@example.com</a></p>
+    <p><a href="https://github.com/kodeforge-labs" target="_blank" rel="noopener">GitHub</a> · <a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a> · <a href="#" target="_blank" rel="noopener">Download CV</a></p>
+  </section>
+</main>
+<footer>© <span id="yr"></span> Your Name</footer>
 </div>
-
 <script>
 (function(){
-  var $=function(i){return document.getElementById(i)};
-  $("yr").textContent=new Date().getFullYear();
-  var inp=$("in"),out=$("out"),st=$("status");
-  function fmt(){
-    try{out.className="";out.textContent=JSON.stringify(JSON.parse(inp.value),null,2);st.textContent="valid JSON"}
-    catch(e){out.className="err";out.textContent="Invalid JSON: "+e.message;st.textContent="error"}
+  var D=[
+   ["Power Apps","Custom apps for forms, approvals and field work, without months of coding.",["Canvas apps for mobile and web","Model-driven apps on Dataverse","Power Fx logic and reusable components"]],
+   ["Power Automate","Automation that removes copy-paste work and chases approvals for you.",["Approval and notification flows","Desktop flows (RPA) for legacy systems","Integrations with Teams, Outlook, SQL"]],
+   ["Power BI","Dashboards that show decision-makers what is happening now.",["Star-schema data models","DAX measures and KPIs","Row-level security and scheduled refresh"]],
+   ["Dataverse","A secure, structured data layer shared by apps and flows.",["Tables, relationships and business rules","Security roles and column security","Solutions for dev, test and production"]],
+   ["SharePoint","Lists and libraries as the front door for documents and data.",["Lists with views, forms and permissions","Document libraries with approval flows","Pages and Teams integration"]]
+  ];
+  var tabs=document.getElementById("tabs"),panel=document.getElementById("panel");
+  function show(i){
+    [].forEach.call(tabs.children,function(b,j){b.setAttribute("aria-selected",j===i)});
+    var d=D[i],h="<h3>"+d[0]+"</h3><p>"+d[1]+"</p><ul>"+d[2].map(function(x){return "<li>"+x+"</li>"}).join("")+"</ul>";
+    panel.innerHTML=h;
   }
-  $("fmt").addEventListener("click",fmt);fmt();
+  D.forEach(function(d,i){var b=document.createElement("button");b.textContent=d[0];b.setAttribute("role","tab");b.addEventListener("click",function(){show(i)});tabs.appendChild(b)});
+  show(0);
+  document.getElementById("yr").textContent=new Date().getFullYear();
   var root=document.documentElement;
   try{var t=localStorage.getItem("theme");if(t)root.setAttribute("data-theme",t)}catch(e){}
-  $("theme").addEventListener("click",function(){
+  document.getElementById("theme").addEventListener("click",function(){
     var dark=root.getAttribute("data-theme")?root.getAttribute("data-theme")==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
     var n=dark?"light":"dark";root.setAttribute("data-theme",n);
     try{localStorage.setItem("theme",n)}catch(e){}

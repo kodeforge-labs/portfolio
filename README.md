@@ -2,12 +2,12 @@
   <img src="logo-horizontal.svg" alt="kodeforge-labs" width="420">
 </p>
 
-# Hi, I'm [Your Name] 👋
+# Hi, I'm Aquib Javed 👋
 
 **Power Platform Developer** building business apps, automations and dashboards that save teams time.
 
 🌐 **Portfolio:** [kodeforge-labs.github.io](https://kodeforge-labs.github.io)
-📫 **Contact:** you@example.com
+📫 **Contact:** akibjaved413@gmail.com
 📍 **Location:** Khulna, Bangladesh · Open to remote work
 
 ---

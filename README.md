@@ -6,7 +6,7 @@
 
 **Power Platform Developer** building business apps, automations and dashboards that save teams time.
 
-🌐 **Portfolio:** [kodeforge-labs.github.io](https://kodeforge-labs.github.io)
+🌐 **Portfolio:** [kodeforge-labs.github.io](https://kodeforge-labs.github.io/portfolio)
 📫 **Contact:** akibjaved413@gmail.com
 📍 **Location:** Khulna, Bangladesh · Open to remote work
 
